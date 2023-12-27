@@ -1,8 +1,34 @@
-.productitem {
-  width: 350px
+
+.productItem {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
-.productitem img {
-  width: 100%;
-  height: 350px;
+.productImage {
+  max-width: 100%;
+  height: auto;
+}
+
+.productTitle {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.productPrice {
+  color: #4caf50;
+}
+
+.addToCartButton {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.addToCartButton:hover {
+  background-color: #66bb6a;
 }

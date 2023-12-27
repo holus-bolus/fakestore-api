@@ -1,4 +1,4 @@
-import classes from './ProductItem.module.css';
+import styles from './ProductItem.module.css';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../store/cartSlice.ts';
 
@@ -23,12 +23,14 @@ const ProductItem = ({
     dispatch(addToCart({ id, name, price }));
   };
   return (
-    <li className={classes.productitem} key={id}>
-      <img src={image} alt={name} />
-      <h2>{name}</h2>
+    <li className={styles.productItem}>
+      <img src={image} alt={name} className={styles.productImage} />
+      <h2 className={styles.productTitle}>{name}</h2>
       <p>{description}</p>
-      <p>{price}</p>
-      <button onClick={addItemToCartHandler}>Add item to cart</button>
+      <p className={styles.productPrice}>{price}</p>
+      <button onClick={addItemToCartHandler} className={styles.addToCartButton}>
+        Add item to cart
+      </button>
     </li>
   );
 };
