@@ -27,7 +27,7 @@ const ProductItem = ({
       <img src={image} alt={name} className={styles.productImage} />
       <h2 className={styles.productTitle}>{name}</h2>
       <p>{description}</p>
-      <p className={styles.productPrice}>{price}</p>
+      <p className={styles.productPrice}>$ {price}</p>
       <button onClick={addItemToCartHandler} className={styles.addToCartButton}>
         Add item to cart
       </button>
