@@ -38,7 +38,6 @@ const Cart = () => {
           </li>
         ))}
       </ul>
-
       <div className={styles.totalPrice}>Total Price: {totalPrice}</div>
     </div>
   );
