@@ -1,14 +1,14 @@
-import './App.css'
-import Products from "./components/Products/Products.tsx";
+import './App.css';
+import Products from './components/Products/Products.tsx';
+import Cart from './components/Cart/Cart.tsx';
 
 function App() {
-
-
-    return (
-        <>
-            <Products/>
-        </>
-    )
+  return (
+    <>
+      <Cart />
+      <Products />
+    </>
+  );
 }
 
-export default App
+export default App;

@@ -1,8 +1,16 @@
 import { useEffect, useState } from 'react';
 import ProductItem from '../ProductItem/ProductItem.tsx';
 
+interface Product {
+  id: number;
+  image: string;
+  title: string;
+  description: string;
+  price: number;
+}
+
 const Products = () => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<Product[]>([]);
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
       .then((res) => res.json())
@@ -17,9 +25,10 @@ const Products = () => {
             <ProductItem
               key={product.id}
               image={product.image}
-              title={product.title}
+              name={product.title}
               description={product.description}
               price={product.price}
+              id={product.id}
             />
           );
         })}
